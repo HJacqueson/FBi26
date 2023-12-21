@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RedirectPermanent /home/infos-pratiques https://www.fbi26.fr/#contact
+
+ErrorDocument 404 /404-v1.html

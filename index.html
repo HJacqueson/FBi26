@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>FBi26 - Votre réparateur informatique dans la Drôme</title>
+
+    <!-- Balise Canonical -->
+    <link rel=“canonical” href=“https://www.fbi26.fr”>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="FBi26 | Votre réparateur informatique dans la Drôme">
+    <meta name="keywords" content="reparation ordi drome, ordinateur drome, reparation, informatique, SAV ordinateur, ordinateur, formation ordinateur drome">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-touch-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Page styles -->
+    <style>
+      html{
+        --scroll-behavior: smooth;
+        scroll-behavior: smooth;
+      }
+
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+
+      .dark-mode .logo{
+        display: none !important;
+      }
+
+      .dark-mode .logo2{
+        display: block !important;
+      }
+
+      .dark-mode .navbar {
+        background-color: #0b0f19 !important;
+      }
+
+      .dark-mode footer {
+        background-color: #0b0f19 !important;
+      }
+
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+
+      .color-changing-text-1 {
+            animation: changeColor 5s linear infinite;
+        }
+      @keyframes changeColor {
+        0% {
+          color: #862ece;
+        }
+        49%{
+          color:#862ece
+        }
+          50% {
+            color: #28ab11;
+        }
+        99%{
+          color: #28ab11;
+        }
+        100% {
+          color: #862ece;
+        }
+      }
+
+      .color-changing-text-2 {
+        animation: changeColor2 5s linear infinite;
+      }
+      @keyframes changeColor2 {
+        0% {
+          color: #28ab11;
+        }
+        49%{
+          color:#28ab11;
+        }
+        50% {
+          color: #862ece;
+        }
+        99%{
+          color: #862ece;
+        }
+        100% {
+          color: #28ab11;
+        }
+      }
+
+      .perspective-block {
+         perspective: 1000px; 
+      }
+
+      .rotating-block {
+        animation: rotateInfinite 10s linear infinite; 
+      }
+      @keyframes rotateInfinite {
+        0% {
+          transform: rotateY(0deg); 
+        }
+        25%{
+          transform: rotateY(10deg); 
+          }
+        50% {
+          transform: rotateY(0deg); 
+        }
+        75% {
+          transform: rotateY(-10deg); 
+        }
+        100% {
+          transform: rotateY(0deg); 
+        }    
+      }
+
+      @media (max-width: 768px) {
+        .nav-link {
+        border: none !important; 
+        }
+      }
+
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 200px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; 
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      .flip-card-front {
+        background-color: #862ece;
+      }
+
+      .flip-card-back {
+        background-color: #28ab11 ;
+        transform: rotateX(180deg);
+      }
+      @keyframes flip {
+        0% {
+          transform: rotateX(0deg);
+        }
+        45% {
+          transform: rotateX(0deg);
+        }
+        50% {
+          transform: rotateX(180deg);
+        }
+        95% {
+          transform: rotateX(180deg);
+        }
+        100%{
+          transform: rotateX(360deg);
+        }
+      }
+
+      .flip-card-inner {
+        animation: flip 10s linear infinite;
+      }
+
+      .dark-mode .slidebrand{
+        background-color: rgb(63, 62, 62);
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading & EmailJS scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('aw4_y6aOrHTpg1Pvu');
+        })();
+    </script>
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+          var form = document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // generate a five digit number for the contact_number variable
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_kx728rw', 'template_hi5scsd', this)
+              .then(function() {
+                console.log('SUCCESS!');
+                  alert("Votre message a bien été envoyé !")
+                }, function(error) {
+                  console.log('FAILED...', error);
+              });
+          });
+        };
+      })();
+    </script>
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/d368231a40.js" crossorigin="anonymous"></script>
+
+  </head>
+
+  <!-- Body -->
+  <body>
+    
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+      <!-- Navbar -->
+      <!-- Remove "fixed-top" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg shadow-dark navbar-sticky" style="background-color: #BEE5B7;">
+        <div class="container px-3">
+          <div data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+            <a href="index.html" class="navbar-brand p-0">
+              <img src="assets/img/logofbi26.png" width="80" alt="FBi26" class="logo d-block" data-aos="fade-up" data-aos-once="true">
+              <img src="assets/img/logofbi26-blanc.png" width="80" alt="FBi26" class="logo2 d-none">
+            </a>
+          </div>
+          
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom" style="background-color: #BEE5B7;">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="#accueil" class="nav-link border-dark border-end border-0 border-md-1" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#services" class="nav-link border-dark border-end" data-aos="flip-left" data-aos-delay="650" data-aos-duration="1000" data-aos-once="true">Mes Services</a>        
+                </li>
+                <li class="nav-item">
+                  <a href="#apropos" class="nav-link border-dark border-end" data-aos="flip-left" data-aos-delay="800" data-aos-duration="1000" data-aos-once="true">À Propos</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link" data-aos="flip-left" data-aos-delay="950" data-aos-duration="1000" data-aos-once="true">Me Contacter</a>
+                </li>                
+              </ul>
+            </div>  
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input mt-1" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class="bx bx-sun fs-2"></i></label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode"><i class="bx bx-moon fs-2"></i></label>
+          </div>
+          <button type="button" class="navbar-toggler mx-2 mb-2" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Accueil -->
+      <section class="position-relative pb-2" id="accueil">
+        <div class="container position-relative zindex-5">
+          <div class="row mt-4">
+            <div class="col-md-6 text-center text-lg-start pb-3 pb-md-4 pb-lg-0 d-flex flex-column align-items-center align-items-md-start" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
+              <h1 class="color-changing-text-1 d-flex d-none"  data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" data-aos-once="true" style="font-size: 4rem !important;">
+                FB<span class="color-changing-text-2">i26</span>
+              </h1>
+              <div class="flip-card border-0 d-flex align-items-center"  data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" data-aos-once="true">  
+                <div class="card flip-card-inner h-50 shadow">
+                  <div class="card flip-card-front d-flex align-items-center justify-content-center">
+                    <p class="mb-0 fw-bold fst-italic" style="color: #28ab11; font-size: 4rem !important;">...FBi26</p>
+                  </div>
+                  <div class="card flip-card-back d-flex align-items-center justify-content-center">
+                    <p class="mb-0 fw-bold fst-italic" style="color: #862ece; font-size: 2.5rem !important;">Évidemment...</p>
+                  </div>
+                </div>        
+              </div>
+              <h3 class="display-5 pb-2" data-aos="fade-up" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000" data-aos-once="true">Particuliers et artisans,<br>
+                votre spécialiste informatique
+                à domicile
+              </h3>
+              <div class="d-flex mb-4 justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
+                <img src="assets/img/fbi26-move.png" alt="FBi26" class="d-block logo">
+                <img src="assets/img/fbi26-move-blanc.png" alt="FBi26" class="d-none logo2">
+              </div>
+              <div class="d-flex justify-content-start flex-column flex-md-row">
+                <p class="me-4"><i class='bx bxs-phone'></i> : 
+                <a href="tel:0620455566" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                  06.20.45.55.66 
+                </a></p>
+                <p><i class='bx bxs-envelope'></i> : 
+                <a href="mailto:fbinfor26@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                  fbinfor26@gmail.com
+                </a></p>
+              </div>             
+            </div>
+            <div class="col-md-5 perspective-block offset-md-1 position-relative zindex-5 mb-5 mb-lg-0 mt-md-5" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000" data-aos-once="true">
+              <div class="rellax rotating-block card bg-primary border-0 shadow-xxl shadow-primary py-2 p-sm-4"><!--data-disable-parallax-down="lg" data-rellax-speed="-1" (ajoutez à la balise pour stopper l'animation en mode mobile)-->
+                <div class="card-body p-lg-3">
+                  <h2 class="text-light pb-1 pb-md-3">En panne ?<br>Besoin de formations ?</h2>
+                  <p class="fs-lg text-light pb-2 pb-md-0 mb-4 mb-md-5">
+                    FBi26, votre expert informatique personnel !
+                    François Bajot offre des services de réparation d'ordinateurs, 
+                    d'installation de systèmes d'exploitation, de logiciels, et des formations adaptées à vos demandes. 
+                    Il sera là pour résoudre efficacement tous vos problèmes informatiques, assurer des mises à jour système, assurer votre sécurité,
+                    et vous aider à acquérir des compétences informatiques de base. Avec FBi26, 
+                    vous avez un partenaire informatique dédié à votre service.
+                  </p>
+                </div>
+                <div class="card-footer d-flex flex-column justify-content-center">
+                  <audio  src="assets/audio/mission-impossible.wav" class="rounded-3 align-items-center" preload="auto" controls autoplay="true"></audio>
+                  <!-- <p class="text-muted text-center p-0 m-O">Vous écoutez le thème de Mission Impossible</p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-lg-block" style="margin-top: -165px;"></div>
+          <div class="row align-items-end"> <!-- Si pas d'audio, ajouter ces valeurs à l'attibuts class : mt-5 pt-5 -->
+            <div class="col-lg-6 d-none d-lg-block pt-5">
+              <img src="assets/img/reparation-2.jpg" class="rellax rounded-3" alt="Image" data-rellax-speed="1.35" data-disable-parallax-down="md" >
+            </div>
+            <div class="col-lg-6 d-flex flex-column flex-md-row align-items-center justify-content-end pb-5">
+              <div class="d-flex align-items-center ps-xl-5 mb-4 mb-md-0">
+                <a href="https://www.youtube.com/watch?v=NEPxdrQtakQ&t=52s&ab_channel=LeMondedesAvengers" target="_blank" class="btn btn-icon btn-secondary btn-lg rounded d-lg-none d-xl-inline-flex">
+                  <i class="bx bx-time text-light fs-3">
+                  </i>
+                </a>
+                <ul class="list-unstyled ps-3 ps-lg-0 mx-3 mb-0">
+                  <li><strong class="text-dark">Lundi – Vendredi :</strong> 9h–12h, 14h-17h</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-primary btn-lg shadow-primary">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mes services -->
+      <section class="px-5 pt-5 bg-secondary d-flex flex-column" id="services">
+        <h2 class="h1 pt-4 pb-4 mt-5 text-primary text-center text-md-start d-none" data-aos="fade-right" data-aos-once="true">Mes <span class="text-secondary">Services</span></h1>
+          <div class="row">
+            <div class="flip-card border-0 d-flex align-items-center mw-100 p-0" data-aos="fade-right" data-aos-once="true" style="width: 400px !important">  
+              <div class="card flip-card-inner h-50 shadow mw-100">
+                <div class="card flip-card-front d-flex align-items-center justify-content-center">
+                  <p class="mb-0 fw-bold" style="color: #28ab11; font-size: 2.3rem !important; line-height: 2rem;">Mes Services</p>
+                </div>
+                <div class="card flip-card-back d-flex align-items-center justify-content-center">
+                  <p class="mb-0 fw-bold" style="color: #862ece; font-size: 2.3rem; line-height: 2rem;">Mes Services</p>
+                </div>
+              </div>        
+            </div>
+          </div>
+          <div class="row mt-2 text-muted text-center text-md-start">
+            <div class="col-12 col-md-6">
+              <p>Affilié à la démarche Répar'Acteurs par la chambre de métiers et de l'artisanat 
+                je me dois de vous proposer une réparation avant d'envisager le remplacement à neuf.</p>
+            </div>
+            <div class="col-12 col-md-6 row">
+              <div class="col-6 col-md-3" width="100">
+                <img src="assets/img/brands/logo-ca-suffit-gachis.png" alt="logo ça suffit le gâchis">
+              </div>
+              <div class="col-6 col-md-3" width="100">
+                <img src="assets/img/brands/logo-reparacteurs-.png" alt="logo Répar'Acteurs">
+              </div>
+              <div class="col-6 col-md-3" width="100">
+                <img src="assets/img/brands/logo-artisanat.png" alt="logo Artisanat première entreprise de France">
+              </div>
+              <div class="col-6 col-md-3" width="100">
+                <img src="assets/img/brands/logo-cma.png" alt="logo Chambre des Métiers et de l'Artisanat - Auvergne Rhône Alpes">
+              </div>
+            </div>
+          </div>
+        <div class="row row-cols-1 row-cols-md-3">
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-down" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/cms.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-solid fa-screwdriver-wrench fa-2xl" style="color: white;"></i>
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  SAV Informatique
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">
+                  Besoin d'aide avec votre ordinateur ? 
+                  Que vous soyez à domicile ou par téléphone,
+                  je suis prêt à résoudre tous vos problèmes informatiques.  
+                  Je m'engage à vous fournir une assistance rapide, efficace et conviviale. 
+                  Que ce soit pour des problèmes matériels, des questions logicielles, 
+                  des soucis de réseau ou tout autre problème, je suis là pour vous guider. 
+                  N'hésitez pas à me contacter pour un service fiable et professionnel, 
+                  et ainsi rendre votre expérience informatique agréable.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/rocket.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-solid fa-file-contract fa-2xl" style="color: white;"></i>
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Devis
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0"> 
+                  Besoin d'un nouvel ordinateur sur mesure ? 
+                  Je peux vous fournir un devis personnalisé pour ordinateur 
+                  qui répondra parfaitement à vos besoins. 
+                  Adepte du reconditionné je vous proposerai une gamme de PC 
+                  Professionnels endurants à prix inférieurs aux PC grand public. 
+                  Si vous cherchez à installer un logiciel spécifique ou à optimiser votre système, 
+                  je suis également là pour vous. 
+                  Contactez-moi pour discuter de vos projets informatiques et recevoir un devis gratuit. 
+                  Faites confiance à mon expertise pour simplifier et améliorer votre environnement numérique.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-down" data-aos-delay="750" data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/mobile-app.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-solid fa-earth-americas fa-2xl" style="color: white;"></i>                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Internet
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">
+                  Découvrez les formations Internet pour naviguer en toute confiance. 
+                  Je vous guiderai dans l'utilisation des moteurs de recherche, 
+                  la sécurité en ligne et l'interaction sur les réseaux sociaux. 
+                  Maîtrisez les bases pour une expérience web sûre et éclairée. 
+                  Explorez les opportunités illimitées d'Internet 
+                  et contactez-moi dès maintenant pour enrichir votre expérience en ligne.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-up" data-aos-delay="250"data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/analytics.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-solid fa-shield-halved fa-2xl" style="color: white;"></i>
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Sécurité Informatique
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">
+                  Mes conseils et assistance en sécurité informatique vous préparent à faire face aux menaces en ligne. 
+                  Apprenez les bases de la protection des données, de la prévention des cyberattaques 
+                  et de la gestion des mots de passe. 
+                  Naviguez en toute sécurité dans le monde numérique et protégez vos informations sensibles. 
+                  Votre sécurité en ligne est ma priorité.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-up" data-aos-delay="500"data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/web-search.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-brands fa-windows fa-2xl" style="color: white;"></i>
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Logiciels Bureautiques
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">
+                  Apprenez à utiliser efficacement des outils tels que Microsoft Office et Google Workspace pour créer des documents, 
+                  des feuilles de calcul, des présentations et gérer votre communication professionnelle. 
+                  Que vous soyez débutant ou que vous souhaitiez perfectionner vos compétences. 
+                  L'excellence dans la productivité commence ici.</p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item -->
+          <div class="col py-4 my-2 my-sm-3" data-aos="fade-up" data-aos-delay="750" data-aos-duration="1000" data-aos-once="true">
+            <a href="#contact" class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 ms-xl-2">
+              <div class="card-body pt-3">
+                <div class="d-inline-block bg-primary shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+                  <!-- <img src="assets/img/services/icons/timer.svg" class="d-block m-1" width="40" alt="Icon"> -->
+                  <i class="fa-solid fa-floppy-disk fa-2xl" style="color: white;"></i>
+                </div>
+                <h2 class="h4 d-inline-flex align-items-center">
+                  Sauvegarde de Documents
+                  <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i>
+                </h2>
+                <p class="fs-sm text-body mb-0">
+                  La sauvegarde de documents est essentielle pour prévenir la perte de données critiques. 
+                  Je vous enseignerai les meilleures pratiques en matière de sauvegarde, 
+                  du choix des méthodes adéquates à la gestion des supports de stockage. 
+                  Je vous guiderai pour mettre en place des sauvegardes automatisées et sécurisées. 
+                  Que vous soyez un utilisateur privé ou professionnel, la protection de vos données est fondamentale. 
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- A propos -->
+      <section class="px-5 pt-5 bg-secondary" id="apropos">
+        <h2 class="h1 mt-5 pt-3 pb-4 text-center text-primary d-none" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">À <span class="text-secondary">Propos</span></h2>
+        <div class="row justify-content-center">
+          <div class="flip-card border-0 d-flex align-items-center mw-100 p-0" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" style="width: 400px !important">  
+            <div class="card flip-card-inner h-50 shadow mw-100">
+              <div class="card flip-card-front d-flex align-items-center justify-content-center">
+                <p class="mb-0 fw-bold" style="color: #28ab11; font-size: 2.3rem !important;">À Propos</p>
+              </div>
+              <div class="card flip-card-back d-flex align-items-center justify-content-center">
+                <p class="mb-0 fw-bold" style="color: #862ece; font-size: 2.3rem;">À Propos</p>
+              </div>
+            </div>        
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 d-none d-md-block">
+
+            <!-- Swiper tabs (Author images) -->
+            <div class="swiper-tabs">
+
+              <!-- Author 1 image -->
+              <div id="author-1" class="card bg-transparent border-0 swiper-tab active" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
+                <div class="card-body p-0 rounded-3 bg-size-cover bg-repeat-0 bg-position-top-center" style="background-image: url(assets/img/francois-bajot.jpg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="position-relative ms-xxl-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000" data-aos-once="true">
+              <div class="d-none d-dark-mode-block position-absolute top-0 start-0 w-100 h-100 rounded-3"></div>
+              <div class="card border-dark border-0 shadow-sm zindex-2 mt-4 pt-5 p-4 p-xxl-5">
+                <span class="btn btn-icon btn-primary btn-lg shadow-primary pe-none position-absolute top-0 translate-middle-y">
+                  <i class="bx bxs-quote-left"></i>
+                </span>
+  
+                
+                <!-- Slider -->
+                <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                  "spaceBetween": 24,
+                  "loop": true,
+                  "tabs": true,
+                  "navigation": {
+                    "prevEl": "#prev",
+                    "nextEl": "#next"
+                  }
+                }'>
+                  <div class="swiper-wrapper">
+  
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto" data-swiper-tab="#author-1">
+                      <figure class="card h-100 position-relative border-0 bg-transparent">
+                        <blockquote class="card-body p-0 mb-0">
+                          <p class="mb-2 fs-sm">Premières lignes de programmation informatiques sur OricAtmos en 1984, 
+                            j’ai suivi l’évolution de l’outil informatique professionnel et grand public depuis ses débuts. 
+                            Après 18 années passées dans le monde de l’avionique, dépannage assisté par informatique, 
+                            suivi et projection du comportement logiciel en temps réel, adaptation des logiciels au comportement humain, 
+                            pilotage automatique, que d’émotions, quel bonheur !<br>
+                            La GAO et tous ses dérivés GMAO (Maintenance), GPAO (Production) et ERP ont amélioré le quotidien des entreprises .</p>
+                            <p class="text-muted fs-sm">Lexique des abréviations : GAO (Gestion Assistée parOrdinateur), ERP (Entreprises Ressources Planning)</p>
+                        </blockquote>
+                        <figcaption class="card-footer border-0 d-sm-flex w-100 pb-2">
+                          <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                            <img src="assets/img/francois-bajot.jpg" width="48" class="d-md-none rounded-circle" alt="François Bajot">
+                            <div class="ps-3 ps-md-0">
+                              <h5 class="fw-semibold lh-base mb-0">François Bajot</h5>
+                              <!-- <span class="fs-sm text-muted">FBi26</span> -->
+                            </div>
+                          </div>
+                          <img src="assets/img/logofbi26.png" width="30" class="d-block logo mt-2 mt-md-0" alt="FBi26">
+                          <img src="assets/img/logofbi26-blanc.png" width="30" class="d-none logo2 mt-2 mt-md-0" alt="FBi26">
+
+                        </figcaption>
+                      </figure>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto" data-swiper-tab="#author-1">
+                      <figure class="card h-100 position-relative border-0 bg-transparent">
+                        <blockquote class="card-body p-0 mb-0">
+                          <p class="mb-2 fs-sm">Mais, qu’en est-il de l’adaptation de cette formidable technologie aux particuliers ?<br>
+                            Se soucie-t-on de leurs attentes ?<br></p>
+                          <p class="mb-0 fs-sm">Les statistiques sont là, vous utilisez moins de 3 % des capacités de votre ordinateur, 
+                            en retour d’un investissement souvent trop élevé, par manque de conseils.
+                            <br>Je franchis donc le pas, après une bonne remise à niveau au sein d’Alpes Avenir Formations 
+                            sur notre outil informatique (SAV / Gestion /Logiciels / Assistance à distance) en 2012, 
+                            et décide de me mettre au service du particulier : le soutenir dans ses projets, le dépanner, 
+                            comprendre ses attentes et rendre son outil informatique agréable, convivial et le plus utile possible.
+                          </p>
+                        </blockquote>
+                        <figcaption class="card-footer border-0 d-sm-flex w-100 pb-2">
+                          <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                            <img src="assets/img/francois-bajot.jpg" width="48" class="d-md-none rounded-circle" alt="François Bajot">
+                            <div class="ps-3 ps-md-0">
+                              <h5 class="fw-semibold lh-base mb-0">François Bajot</h5>
+                              <!-- <span class="fs-sm text-muted">FBi26</span> -->
+                            </div>
+                          </div>
+                          <img src="assets/img/logofbi26.png" width="30" class="d-block logo mt-2 ms-5 mt-sm-0 ms-sm-0" alt="FBi26">
+                          <img src="assets/img/logofbi26-blanc.png" width="30" class="d-none logo2 mt-2 ms-5 mt-sm-0 ms-sm-0" alt="FBi26">
+
+                        </figcaption>
+                      </figure>
+                    </div>
+  
+                    <!-- Item -->
+                    <div class="swiper-slide h-auto" data-swiper-tab="#author-1">
+                      <figure class="card h-100 position-relative border-0 bg-transparent">
+                        <blockquote class="card-body p-0 mb-0">
+                          <p class="mb-0 fs-sm">Mon concept n’est pas nouveau, juste oublié et remplacé par le besoin de rentabilité ou l’excuse du "Pas le temps… C’est trop long…"
+                            <br>Confucius (551 Av JC) disait déjà : <br>                   
+                            <q class="text-primary">Je ne cherche pas à connaître les réponses, 
+                            je cherche à comprendre les questions</q><br>                         
+                            Et tout devient plus simple…<br>         
+                            Durant 5 ans, je vous ai testé, vous, ma future clientèle. 
+                            5 ans à répertorier vos besoins réels, vos déceptions sur l’outil et vos attentes lorsque vous allumez votre ordinateur.                            
+                            Merci pour vos retours plus que positifs, le résultat escompté est là !</p>
+                        </blockquote>
+                        <figcaption class="card-footer border-0 d-sm-flex w-100 pb-2">
+                          <div class="d-flex align-items-center border-end-sm pe-sm-4 me-sm-2">
+                            <img src="assets/img/francois-bajot.jpg" width="48" class="d-md-none rounded-circle" alt="François Bajot">
+                            <div class="ps-3 ps-md-0">
+                              <h5 class="fw-semibold lh-base mb-0">François Bajot</h5>
+                            </div>
+                          </div>
+                          <img src="assets/img/logofbi26.png" width="30" class="d-block logo mt-2 ms-5 mt-sm-0 ms-sm-0" alt="FBi26">
+                          <img src="assets/img/logofbi26-blanc.png" width="30" class="d-none logo2 mt-2 ms-5 mt-sm-0 ms-sm-0" alt="FBi26">
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>        
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Prev / Next buttons -->
+        <div class="d-flex justify-content-center justify-content-md-start pt-3 pb-3 mt-2 mt-md-3">
+          <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm me-2">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button type="button" id="next" class="btn btn-next btn-icon btn-sm ms-2">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+        </div>
+        <!-- <div class="row mt-2 text-muted text-center">
+          <div class="col">
+            <p>Je me dois de remercier ces anonymes, ma famille et mes amis pour cette longue mise en place
+              durant laquelle j’ai sans doute été exigeant sur le retour de mes questions, 
+              sur votre façon d’utiliser votre ordinateur.
+             </p>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- Contact form -->
+      <section class="position-relative" id="contact">
+        <div class="container position-relative zindex-5 py-2">
+          <div class="row justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3 pt-4">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11 pt-4 d-flex flex-column align-items-center">
+              <h2 class="h1 mb-4 text-primary d-none" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Me <span class="text-secondary">Contacter</span></h2>
+              <div class="flip-card border-0 d-flex align-items-center mw-100" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="width: 400px !important">  
+                <div class="card flip-card-inner h-50 shadow mw-100">
+                  <div class="card flip-card-front d-flex align-items-center justify-content-center">
+                    <p class="mb-0 fw-bold" style="color: #28ab11; font-size: 2.3rem !important;">Me Contacter</p>
+                  </div>
+                  <div class="card flip-card-back d-flex align-items-center justify-content-center">
+                    <p class="mb-0 fw-bold" style="color: #862ece; font-size: 2.3rem;">Me Contacter</p>
+                  </div>
+                </div>        
+              </div>
+              <p class="text-muted mb-0" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">Pour une réponse plus rapide et efficace, veuillez exprimer votre demande ou simplement vos questions sur le formulaire de contact.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <form class="row needs-validation" novalidate id="contact-form" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000" data-aos-once="true">
+                <input type="hidden" name="contact_number">
+                <div class="col-sm-6 mb-4">
+                  <label for="fn" class="form-label">Prénom</label>
+                  <input type="text" id="fn" class="form-control" name="user_firstname" required>
+                  <div class="invalid-feedback">Veuillez entrer votre prénom</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="ln" class="form-label">Nom</label>
+                  <input type="text" id="ln" class="form-control" name="user_name" required>
+                  <div class="invalid-feedback">Veuillez entrer votre nom de famille</div>
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="email" class="form-label">Adresse Mail</label>
+                  <input type="email" id="email" class="form-control" name="user_mail" required>
+                  <div class="invalid-feedback">Veuillez entrer votre adresse mail</div>
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="4" name="user_message" required></textarea>
+                  <div class="invalid-feedback">Veuillez entrer votre message</div>
+                </div>
+                <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4 mb-3">
+                  <button type="submit" class="btn btn-primary shadow-primary btn-lg">Envoyer !</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- BG shape -->
+        <div class="position-absolute end-0 bottom-0 text-secondary">
+          <svg width="469" height="343" viewBox="0 0 469 343" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M273.631 680.872C442.436 768.853 639.315 708.216 717.593 558.212C795.871 408.208 732.941 212.157 564.137 124.176C395.333 36.195 198.453 96.8326 120.175 246.836C41.8972 396.84 104.827 592.891 273.631 680.872ZM236.335 752.344C440.804 858.914 688.289 788.686 789.109 595.486C889.928 402.286 805.903 159.274 601.433 52.7043C396.964 -53.8654 149.479 16.3623 48.6595 209.562C-52.1598 402.762 31.8652 645.774 236.335 752.344Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M298.401 633.404C434.98 704.59 598.31 656.971 664.332 530.451C730.355 403.932 675.946 242.827 539.367 171.642C402.787 100.457 239.458 148.076 173.435 274.595C107.413 401.114 161.822 562.219 298.401 633.404ZM288.455 652.464C434.545 728.606 611.369 678.429 683.403 540.391C755.437 402.353 695.402 228.725 549.312 152.583C403.222 76.4404 226.398 126.617 154.365 264.655C82.331 402.693 142.365 576.321 288.455 652.464Z" fill="currentColor"/></svg>
+        </div>
+      </section>
+
+      <!-- Brands (Carousel) -->
+      <section class="py-5 bg-primary" id="clients">
+        <div class="container">
+          <div class="swiper mx-n2" data-swiper-options='{
+            "autoplay": true,
+            "loop": true,
+            "slidesPerView": 2,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 3,
+                "spaceBetween": 8
+              },
+              "650": {
+                "slidesPerView": 4,
+                "spaceBetween": 8
+              },
+              "900": {
+                "slidesPerView": 5,
+                "spaceBetween": 8
+              },
+              "1100": {
+                "slidesPerView": 6,
+                "spaceBetween": 8
+              }
+            }
+          }'>
+          
+            <div class="swiper-wrapper">
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-browser.png" class="d-block image mx-auto" width="100" alt="Logo browsers">
+                </div>
+              </div>
+  
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-acer.png" class="d-block image mx-auto" width="100" alt="Logo Acer">
+                </div>
+              </div>
+  
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-acronis.png" class="d-block image mx-auto" width="100" alt="Logo Acronis">
+                </div>
+              </div>
+  
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-adobe.png" class="d-block image mx-auto" width="100" alt="Logo Adobe">
+                </div>
+              </div>
+  
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-amd.png" class="d-block image mx-auto" width="100" alt="Logo AMD">
+                </div>
+              </div>
+  
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-asus.png" class="d-block image mx-auto" width="100" alt="Logo ASUS">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-bitdefender.png" class="d-block image mx-auto" width="100" alt="Logo Bitfender">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-brother.png" class="d-block image mx-auto" width="100" alt="Logo Brother">
+                </div>
+              </div>
+            
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-canon.png" class="d-block image mx-auto" width="100" alt="Logo Canon">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-cisco.png" class="d-block image mx-auto" width="100" alt="Logo CISCO">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-compaq.png" class="d-block image mx-auto" width="100" alt="Logo Compaq">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-cool-master.png" class="d-block image mx-auto" width="100" alt="Logo Cool Master">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-corsair.png" class="d-block image mx-auto" width="100" alt="Logo Corsair">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-crucial.png" class="d-block image mx-auto" width="100" alt="Logo Crucial">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-dell.png" class="d-block image mx-auto" width="100" alt="Logo Dell">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-eaton.png" class="d-block image mx-auto" width="100" alt="Logo Eaton">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-epson.png" class="d-block image mx-auto" width="100" alt="Logo Epson">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-fujitsu.png" class="d-block image mx-auto" width="100" alt="Logo Fujitsu">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-g-data.png" class="d-block image mx-auto" width="100" alt="Logo G Data">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-gigabyt.png" class="d-block image mx-auto" width="100" alt="Logo Gigabyt">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-hp.png" class="d-block image mx-auto" width="100" alt="Logo HP">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-ibm.png" class="d-block image mx-auto" width="100" alt="Logo IBM">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-iiyama.png" class="d-block image mx-auto" width="100" alt="Logo Iiyama">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-lenovo.png" class="d-block image mx-auto" width="100" alt="Logo Lenovo">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-lexmark.png" class="d-block image mx-auto" width="100" alt="Logo Lexmark">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-lg.png" class="d-block image mx-auto" width="100" alt="Logo LG">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-logitech.png" class="d-block image mx-auto" width="100" alt="Logo Logitech">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-malwarebytes.png" class="d-block image mx-auto" width="100" alt="Logo Malwarebytes">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-microsoft.png" class="d-block image mx-auto" width="100" alt="Logo Microsoft">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-msi.png" class="d-block image mx-auto" width="100" alt="Logo MSI">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-netgear.png" class="d-block image mx-auto" width="100" alt="Logo Netgear">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-nvidia.png" class="d-block image mx-auto" width="100" alt="Logo Nvidia">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-oki.png" class="d-block image mx-auto" width="100" alt="Logo OKI">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-samsung.png" class="d-block image mx-auto" width="100" alt="Logo Samsung">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-seagate.png" class="d-block image mx-auto" width="100" alt="Logo Seagate">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-toshiba.png" class="d-block image mx-auto" width="100" alt="Logo Toshiba">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-tp-link.png" class="d-block image mx-auto" width="100" alt="Logo TP Link">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-trend-micro.png" class="d-block image mx-auto" width="100" alt="Logo Trend Micro">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-verbatim.png" class="d-block image mx-auto" width="100" alt="Logo Verbatim">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-westerndigital.png" class="d-block image mx-auto" width="100" alt="Logo Western Digital">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-windows10.png" class="d-block image mx-auto" width="100" alt="Logo Windows 10">
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide py-1">
+                <div class="card card-body card-hover slidebrand py-2">
+                  <img src="assets/img/brands/logo-xerox.png" class="d-block image mx-auto" width="100" alt="Logo Xerox">
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pagination (bullets) -->
+            <!-- <div class="swiper-pagination position-relative pt-2 mt-4"></div> -->
+            
+          </div>
+  
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="pt-5 pb-5" style="background-color: #AA6CDC;">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-12 col-md-4 col-lg-3 d-flex flex-column align-items-center">
+            <!-- Social -->
+            <!-- <ul class="list-unstyled list-inline list-social mb-5 mb-md-0">
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="icone instagram Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/linkedin.svg" class="list-social-icon" alt="icone linkedin Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+              <li class="list-inline-item list-social-item me-3">
+                <a href="#!" class="text-decoration-none">
+                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="icone twitter Gîte le Mur d'Abeilles, entreprise de conseil, formation et télémédecine">
+                </a>
+              </li>
+            </ul> -->              
+            <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d5621.512179306359!2d4.904587!3d45.212271!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDXCsDEyJzQzLjAiTiA0wrA1NCcwNC4zIkU!5e0!3m2!1sfr!2sus!4v1695234534231!5m2!1sfr!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div
+            class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"
+          >
+            <div id="footer-links" class="row">
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#friends-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Liens utiles & amis</a
+                  >
+                </h6>
+                <div
+                  id="friends-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  <ul class="nav navLink flex-column text-center text-md-start mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <p class="d-none d-md-block px-0 pt-1 pb-2 m-0 text-dark fw-bold"
+                        >Liens utiles & amis :</p
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://le-castel-nicois.fr/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Le Castel Niçois</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://gitemurabeille.com/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Gîte d'Étape le Mur d'Abeilles</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://citywoodpeckers.fr/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >City Woodpeckers</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.facebook.com/vipredac" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        > ViP - Virginie Perrenot</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.eurorepar.fr/garage-garage-des-tours-911.html" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Garage des Tours</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.fruitsdescollines.fr/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Fruits des Collines</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="http://bochaton-electricien26.fr/" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Bochaton Électricité Générale</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.facebook.com/p/Bergerie-du-Tr%C3%A9molet-100054272660047/?paipv=0&eav=AfYNM2nnxJ0VnyDRx2wQeNAU-UdIKHMaqP2CmY5Zmmn8uYfUbjYEQ-YQ402wcMlhhOs&_rdr" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Bergerie du Trémolet</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.bienvenue-a-la-ferme.com/auvergnerhonealpes/drome/la-motte-de-galaure/ferme/earl-les-cabrettes/531389" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >EARL Les Cabrettes</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.facebook.com/blandine.franceschi.96/photos" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Blandine Franceschi</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://www.gralon.net/annuaire/annuaire-gratuit.htm" class="nav-link d-inline-block px-0 pt-1 pb-2 fs-sm" target="_blank"
+                        >Gralon - Annuaire Internet</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div> 
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#menu-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Menu</a
+                  >
+                </h6>
+                <div
+                  id="menu-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  <ul class="nav navLink flex-column text-center text-md-start pb-lg-1 mb-lg-3">
+                    <li class="nav-item">
+                      <a href="#accueil" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Accueil</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#services" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Mes Services</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#apropos" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>À Propos</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#contact" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                      data-scroll='{"offset": 0}'>Me contacter</a
+                      >
+                    </li>
+                  </ul>   
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <h6 class="mb-2">
+                  <a
+                    href="#policy-links"
+                    class="d-block text-center text-uppercase fs-lg dropdown-toggle d-lg-none py-2"
+                    data-bs-toggle="collapse"
+                    >Conditions et Politique</a
+                  >
+                </h6>
+                <div
+                  id="policy-links"
+                  class="collapse d-lg-block"
+                  data-bs-parent="#footer-links"
+                  >
+                  
+                  <ul class="nav navLink flex-column text-center text-md-start mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a href="cgu.html" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Conditions d'utilisation</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="rgpd.html" class="nav-link d-inline-block px-0 pt-1 pb-2"
+                        >Informations RGPD</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>  
+              <div class="col-lg-3 pt-2 pt-lg-0">
+                <div class="pt-2">
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="javascript:openAxeptioCookies()" class="nav-link d-inline-block px-0 pt-1 pb-2">Gestion des cookies</a>
+                  </div>
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="mailto:fbinfor26@gmail.com" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                      fbinfor26@gmail.com
+                    </a>
+                  </div>
+                  <div class="nav flex-column align-items-center align-items-md-start">
+                    <a href="tel:0620455566" class="nav-link d-inline-block px-0 pt-1 pb-2">
+                      06.20.45.55.66 
+                    </a>
+                  </div>
+                  <div class="nav flex-column align-items-start align-items-md-start">
+                    <a href="https://www.facebook.com/Francois.Bajot.infor26/" class="nav-link d-inline-block px-0 pt-1 pb-2" target="_blank">
+                      <i class="bx bxl-facebook-square align-middle fs-3"></i> 
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Fermeture de la toogle bar -->    
+    <script>
+      // Fonction pour fermer la barre de navigation Bootstrap
+      function closeNavbar() {
+          // Vérifiez si la fenêtre a une largeur supérieure à 768px (mode mobile)
+          if (window.innerWidth <= 768) {
+              // Trouver le bouton de bascule et le cliquer pour fermer la barre
+              var toggleButton = document.querySelector(".navbar-toggler");
+              if (toggleButton) {
+                  toggleButton.click();
+              }
+          }
+      }
+
+      // Attachez un gestionnaire de clic à tous les liens du menu
+      var menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+      menuLinks.forEach(function(link) {
+          link.addEventListener("click", function(event) {
+              // Empêchez le comportement par défaut du lien
+              event.preventDefault();
+
+              // Récupérez l'attribut href du lien pour obtenir l'ID de la section cible
+              var sectionId = this.getAttribute("href").slice(1); // Supprimez le caractère "#" au début
+              var targetSection = document.getElementById(sectionId);
+
+              // Assurez-vous que la section cible existe
+              if (targetSection) {
+                  // Faites défiler jusqu'à la section cible
+                  targetSection.scrollIntoView({
+                      behavior: "smooth" // Animation de défilement fluide
+                  });
+
+                  // Attendez que le défilement soit terminé, puis fermez la barre de navigation
+                  setTimeout(function() {
+                      closeNavbar();
+                  }, 400); // Vous pouvez ajuster la durée du délai selon vos besoins
+              }
+          });
+      });
+    </script>
+
+    <!-- Axeptio -->
+    <script>
+      window.axeptioSettings = {
+        clientId: "6511dd612a544affe5808b05",
+        cookiesVersion: "fbi26-fr",
+      };
+       
+      (function(d, s) {
+        var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+        e.async = true; e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+    </script>
+
+  </body>
+</html>
